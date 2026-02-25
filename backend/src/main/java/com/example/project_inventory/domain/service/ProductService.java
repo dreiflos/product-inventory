@@ -41,4 +41,19 @@ public class ProductService {
     public void delete(Long id) {
         productRepository.deleteById(id);
     }
+
+    @Transactional
+    public Product update(Long id, Product productDetails) {
+        Product product = findById(id);
+        product.setName(productDetails.getName());
+        product.setPrice(productDetails.getPrice());
+
+        if (productDetails.getCompositions() != null) {
+            product.getCompositions().clear();
+            product.getCompositions().addAll(productDetails.getCompositions());
+            product.getCompositions().forEach(c -> c.setProduct(product));
+        }
+
+        return productRepository.save(product);
+    }
 }

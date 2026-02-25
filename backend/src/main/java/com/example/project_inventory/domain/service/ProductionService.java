@@ -27,6 +27,7 @@ public class ProductionService {
         List<Map<String, Object>> suggestion = new ArrayList<>();
         double totalRevenue = 0.0;
 
+
         for (Product product : products) {
             int quantityProduced = 0;
             boolean canProduce = true;

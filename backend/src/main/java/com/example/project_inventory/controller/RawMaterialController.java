@@ -1,9 +1,13 @@
 package com.example.project_inventory.controller;
 
+import com.example.project_inventory.domain.model.RawMaterial;
+import com.example.project_inventory.domain.service.RawMaterialService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/raw-materials")
