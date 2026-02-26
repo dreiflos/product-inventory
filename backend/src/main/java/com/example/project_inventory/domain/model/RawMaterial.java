@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity
-@Table(name = "RAW MATERIAL")
+@Table(name = "RAW_MATERIAL")
 @Data
 
 public class RawMaterial {

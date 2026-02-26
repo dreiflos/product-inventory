@@ -11,10 +11,3 @@ public class ProductionReportDTO {
     private Double totalEstimatedValue;
 }
 
-@Data
-@AllArgsConstructor
-class ProductionItemDTO {
-    private String productName;
-    private Integer quantityToProduce;
-    private Double subtotal;
-}

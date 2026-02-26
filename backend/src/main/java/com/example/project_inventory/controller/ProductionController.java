@@ -16,6 +16,6 @@ public class ProductionController {
 
     @GetMapping("/suggested")
     public ResponseEntity<ProductionReportDTO> getSuggestedProduction() {
-        return ResponseEntity.ok((ProductionReportDTO) productionService.calculateSuggestedProduction());
+        return ResponseEntity.ok(productionService.calculateSuggestedProduction());
     }
 }

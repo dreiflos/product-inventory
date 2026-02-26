@@ -1,5 +1,6 @@
 package com.example.project_inventory.domain.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -13,11 +14,12 @@ public class ProductComposition {
     private Long id;
 
     @ManyToOne
+    @JsonIgnoreProperties
     @JoinColumn(name = "product_id", nullable = false)
     private Product product;
 
     @ManyToOne
-    @JoinColumn(name = "raw_material_id", nullable = false)
+    @JoinColumn(name = "RAW_MATERIAL_id", nullable = false)
     private RawMaterial rawMaterial;
 
     @Column(name = "required_quantity", nullable = false)
