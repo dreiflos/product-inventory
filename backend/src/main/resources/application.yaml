@@ -1,11 +1,13 @@
 spring:
   application:
     name: project-inventory
+
   datasource:
     url: ${DB_URL}
     username: ${DB_USER}
     password: ${DB_PASS}
     driver-class-name: oracle.jdbc.OracleDriver
+
   jpa:
     database-platform: org.hibernate.dialect.OracleDialect
     hibernate:
@@ -14,8 +16,10 @@ spring:
     properties:
       hibernate:
         format_sql: true
-        hibernate.jdbc.use_get_generated_keys: true
-        logging:
-          level:
-            com.example.project_inventory: DEBUG
-            org.springframework.web: DEBUG
+        jdbc:
+          use_get_generated_keys: true
+
+logging:
+  level:
+    com.example.project_inventory: DEBUG
+    org.springframework.web: DEBUG

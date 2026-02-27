@@ -4,7 +4,8 @@ import lombok.Data;
 
 @Data
 public class ProductCompositionDTO {
+    private Long id;
     private Long rawMaterialId;
     private String rawMaterialName;
-    private Double requiredQuantity;
+    private Integer requiredQuantity;
 }

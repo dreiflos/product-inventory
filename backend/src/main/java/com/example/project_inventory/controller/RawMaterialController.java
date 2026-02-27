@@ -2,6 +2,7 @@ package com.example.project_inventory.controller;
 
 import com.example.project_inventory.domain.model.RawMaterial;
 import com.example.project_inventory.domain.service.RawMaterialService;
+import com.example.project_inventory.dto.RawMaterialDTO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,23 +18,22 @@ public class RawMaterialController {
     private final RawMaterialService rawMaterialService;
 
     @GetMapping
-    public List<RawMaterial> getAll() {
-        return rawMaterialService.findAll();
-    }
-
-    @PostMapping
-    public ResponseEntity<RawMaterial> create(@RequestBody RawMaterial material) {
-        RawMaterial savedMaterial = rawMaterialService.save(material);
-        return ResponseEntity.status(HttpStatus.CREATED).body(savedMaterial);
+    public ResponseEntity<List<RawMaterialDTO>> getAll() {
+        return ResponseEntity.ok(rawMaterialService.findAll());
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<RawMaterial> getById(@PathVariable Long id) {
-        return ResponseEntity.ok(rawMaterialService.findById(id));
+    public ResponseEntity<RawMaterialDTO> getById(@PathVariable Long id) {
+        return ResponseEntity.ok(rawMaterialService.findByIdAsDto(id));
+    }
+
+    @PostMapping
+    public ResponseEntity<RawMaterialDTO> create(@RequestBody RawMaterial material) {
+        return ResponseEntity.status(HttpStatus.CREATED).body(rawMaterialService.save(material));
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<RawMaterial> update(@PathVariable Long id, @RequestBody RawMaterial material) {
+    public ResponseEntity<RawMaterialDTO> update(@PathVariable Long id, @RequestBody RawMaterial material) {
         return ResponseEntity.ok(rawMaterialService.update(id, material));
     }
 

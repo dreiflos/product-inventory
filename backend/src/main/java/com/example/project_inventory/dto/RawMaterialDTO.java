@@ -6,5 +6,5 @@ import lombok.Data;
 public class RawMaterialDTO {
     private Long id;
     private String name;
-    private Double stockQuantity;
+    private Integer stockQuantity;
 }

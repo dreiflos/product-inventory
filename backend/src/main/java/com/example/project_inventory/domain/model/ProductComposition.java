@@ -14,7 +14,7 @@ public class ProductComposition {
     private Long id;
 
     @ManyToOne
-    @JsonIgnoreProperties
+    @JsonIgnoreProperties({"compositions"})
     @JoinColumn(name = "product_id", nullable = false)
     private Product product;
 
@@ -23,5 +23,5 @@ public class ProductComposition {
     private RawMaterial rawMaterial;
 
     @Column(name = "required_quantity", nullable = false)
-    private Double requiredQuantity;
+    private Integer requiredQuantity;
 }
