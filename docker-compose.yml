@@ -1,0 +1,16 @@
+
+services:
+  oracle-db:
+    image: gvenzl/oracle-free:23-slim
+    container_name: product-inventory-oracle
+    environment:
+      - ORACLE_PASSWORD=admin
+      - APP_USER=autoflex
+      - APP_USER_PASSWORD=autoflex
+    ports:
+      - "1521:1521"
+    volumes:
+      - oracle-data:/opt/oracle/oradata
+
+volumes:
+  oracle-data:
