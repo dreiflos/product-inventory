@@ -15,3 +15,7 @@ spring:
       hibernate:
         format_sql: true
         hibernate.jdbc.use_get_generated_keys: true
+        logging:
+          level:
+            com.example.project_inventory: DEBUG
+            org.springframework.web: DEBUG
