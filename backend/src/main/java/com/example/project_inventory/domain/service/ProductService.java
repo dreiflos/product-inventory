@@ -12,7 +12,6 @@ import com.example.project_inventory.dto.ProductDTO;
 import com.example.project_inventory.exception.BusinessException;
 import com.example.project_inventory.exception.ResourceNotFoundException;
 import lombok.RequiredArgsConstructor;
-import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -120,7 +119,6 @@ public class ProductService {
 
         compositionRepository.deleteById(compositionId);
     }
-
 
     public ProductDTO convertToDto(Product product) {
         ProductDTO dto = new ProductDTO();

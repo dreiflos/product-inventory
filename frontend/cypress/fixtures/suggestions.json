@@ -1,0 +1,7 @@
+{
+  "suggestedItems": [
+    { "productName": "Widget Alpha", "quantityToProduce": 20, "subtotal": 3000.00 },
+    { "productName": "Widget Beta",  "quantityToProduce": 5,  "subtotal": 400.00  }
+  ],
+  "totalEstimatedValue": 3400.00
+}

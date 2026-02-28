@@ -149,7 +149,7 @@ const RawMaterialsPage = () => {
           </div>
           <button
             onClick={() => { setEditMaterial(null); setShowModal(true); }}
-            className="self-start sm:self-auto flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-950 px-5 py-2.5 rounded-md font-display font-bold text-sm tracking-widest uppercase transition-all duration-200 hover:shadow-lg hover:shadow-amber-500/20"
+            className="self-start sm:self-auto flex items-center gap-2 bg-black text-white border border-amber-400 hover:shadow-lg hover:shadow-amber-400/30 px-5 py-2.5 rounded-md font-display font-bold text-sm tracking-widest uppercase transition-all duration-200"
           >
             <Plus size={15} /> Nova Matéria-Prima
           </button>

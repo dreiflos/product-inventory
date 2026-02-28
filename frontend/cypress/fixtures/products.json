@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "Widget Alpha",
+    "price": 150.00,
+    "compositions": [
+      { "id": 1, "rawMaterialId": 1, "rawMaterialName": "Steel", "requiredQuantity": 5 }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Widget Beta",
+    "price": 80.00,
+    "compositions": []
+  }
+]

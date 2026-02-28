@@ -1,0 +1,5 @@
+[
+  { "id": 1, "name": "Steel",    "stockQuantity": 100 },
+  { "id": 2, "name": "Aluminum", "stockQuantity": 8   },
+  { "id": 3, "name": "Plastic",  "stockQuantity": 200 }
+]
