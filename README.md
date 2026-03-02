@@ -135,22 +135,17 @@ npx cypress open
 Todos os testes mocam a API com `cy.intercept`, então rodam sem o backend. Arquivos em `cypress/e2e/`: `products.cy.js`, `rawMaterials.cy.js`, `productionDashboard.cy.js` e `navigation.cy.js`.
 
 ---
-## Arquitetura do sistema
+## Arquitetura do Sistema
 
-O projeto foi estruturado seguindo o padrão de Arquitetura em Camadas, garantindo uma separação clara de responsabilidades, facilitando a manutenção do codigo e permitindo a implementação de novas funcionalidades de forma isolada, sem gerar efeitos colaterais devido a modularidade da arquitetura.
+O projeto foi estruturado seguindo o padrão de Arquitetura em Camadas, garantindo uma separação clara de responsabilidades, facilitando a manutenção do código e permitindo a implementação de novas funcionalidades de forma isolada.
 
-
-`Controller`: Porta de entrada da aplicação. Gerencia as requisições HTTP, valida os dados de entrada e direciona as chamadas para a camada de serviço.
-
-`Service`: É onde reside toda a lógica, regras de validação de inventário e processos que não dependem de protocolos de rede ou DB.
-
-`Domain`: Contém o núcleo da aplicação, sendo eles:
-		- `Model`: Representação das entidades de negócio.  
-		- `Repository`: Interface de comunicação com o banco.  
-	
-`DTO (Data Transfer Objects)`: Camada de transporte de dados. Utilizada para filtrar o que é enviado/recebido da API, protegendo as entidades do domain e evitando a exposição de dados.
-
-`Config`: Centraliza as configurações do projeto.
+* `Controller`: Porta de entrada da aplicação. Gerencia as requisições HTTP, valida os dados de entrada e direciona as chamadas para a camada de serviço.
+* `Service`: É onde reside toda a lógica, regras de validação de inventário e processos que não dependem de protocolos de rede ou DB.
+* `Domain`: Contém o núcleo da aplicação:
+    * `Model`: Representação das entidades de negócio.
+    * `Repository`: Interface de comunicação com o banco.
+* `DTO (Data Transfer Objects)`: Camada de transporte de dados. Utilizada para filtrar o que é enviado/recebido da API, protegendo as entidades do domain.
+* `Config`: Centraliza as configurações do projeto.
 
 ---
 ## Estrutura
