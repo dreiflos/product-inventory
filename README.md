@@ -144,8 +144,8 @@ O projeto foi estruturado seguindo o padrão de Arquitetura em Camadas, garantin
 
 `Service`: É onde reside toda a lógica, regras de validação de inventário e processos que não dependem de protocolos de rede ou DB.
 
-`Domain`: Contém o núcleo da aplicação, sendo eles: /n
-	`Model`: Representação das entidades de negócio. /n
+`Domain`: Contém o núcleo da aplicação, sendo eles:
+	`Model`: Representação das entidades de negócio.
 	`Repository`: Interface de comunicação com o banco.
 	
 `DTO (Data Transfer Objects)`: Camada de transporte de dados. Utilizada para filtrar o que é enviado/recebido da API, protegendo as entidades do domain e evitando a exposição de dados.
